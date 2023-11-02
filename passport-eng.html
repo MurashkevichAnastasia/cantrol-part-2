@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="style.css">
+    <title>Паспорт</title>
+    <!--    <link href="./css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body>
+  <button class="btn" onclick="document.location='passport.html'">Switch lang</button>
+  <img class="image" src="../passport/passport.jpeg" alt="passport">
+  <div class="passport">
+    <h2>Russian Federation</h2>
+    <p class="adress">Passport issued<span class="district">Department of the Federal Migration Service of the Saratov Region</span></p>
+    <p class="data">date of issue<span class="numbers">18.09.2003</span></p>
+    <p class="subdivision">Department code<span class="code">001-001</span></p>
+  </div>
+
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+
+  <!-- next page  -->
+  <div class="next-page">
+    <p class="lastname">Surname<span class="my-lastname">Murashkevich</span></p>
+    <p class="name">Name<span class="my-name">Anastasia</span></p>
+    <p class="surname">Surname<span class="my-surname">Sergeevna</span></p>
+    <p class="gender">Floor<span class="my-gender">wives</span></p>
+    <p class="birth-data">Date of Birth<span class="my-data">12.12.2002</span></p>
+    <p class="birth-place">Place of Birth<span class="my-place">Moscow</span></p>
+  </div>
+
+  <script>
+    const button = document.querySelector('.btn');
+    button.addEventListener('click', function () {
+      console.log('click');
+    });
+  </script>
+</body>
+</html>

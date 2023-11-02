@@ -1,0 +1,44 @@
+1. Создаем HTML форму 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Решение алгоритмической задачи</title>
+</head>
+<body>
+    <h1>Задача: Можно ли из бревна выпилить квадратный брус?</h1>
+    <form id="taskForm">
+        <label for="diameter">Диаметр бревна (D):</label>
+        <input type="number" id="diameter" name="diameter" required><br>
+        
+        <label for="width">Ширина квадратного бруса (A):</label>
+        <input type="number" id="width" name="width" required><br>
+        
+        <input type="submit" value="Решить">
+    </form>
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('taskForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const diameter = parseFloat(document.getElementById('diameter').value);
+            const width = parseFloat(document.getElementById('width').value);
+            
+            if (isSquareBeamPossible(diameter, width)) {
+                document.getElementById('result').textContent = "Можно выпилить квадратный брус.";
+            } else {
+                document.getElementById('result').textContent = "Нельзя выпилить квадратный брус.";
+            }
+        });
+        
+        function isSquareBeamPossible(D, A) {
+            return A <= D;
+        }
+    </script>
+</body>
+</html>
+
+В этом коде мы создаем HTML-форму, где пользователь может ввести диаметр бревна (D) и ширину квадратного бруса (A). При отправке формы выполняется JavaScript-функция isSquareBeamPossible, которая проверяет, можно ли из бревна выпилить квадратный брус с заданными параметрами.
+  2. JavaScript-код выполняет проверку и выводит результат на странице.
+  3. Откройте этот HTML-файл в браузере и используйте форму для решения задачи. Результат будет отображен на странице после отправки формы.
